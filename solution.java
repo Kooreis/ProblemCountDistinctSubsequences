@@ -5,5 +5,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a string:");
         String input = scanner.nextLine();
+        System.out.println("Number of distinct subsequences: " + countSubsequences(input));
     }
 }
