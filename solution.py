@@ -1,5 +1,5 @@
-def count_distinct_subsequences(s):
-    n = len(s)
-    count = [0 for _ in range(n+1)]
-    last = [-1 for _ in range(256)]
-    count[0] = 1
+for i in range(1, n+1):
+        count[i] = 2*count[i-1]
+        if last[ord(s[i-1])] != -1:
+            count[i] = count[i] - count[last[ord(s[i-1])]]
+        last[ord(s[i-1])] = i-1
